@@ -1,22 +1,29 @@
 package io.ruth.quizapp.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-@Entity
+@MappedSuperclass
 public class Question {
     @Id
     private int questionId;
     private String title;
     private String answer;
     private double point;
-    public Question(int questionId, String title, double point){
+    @ManyToOne
+    @JoinColumn(name = "quizId")
+    public Quiz quiz;
+    public Question(int questionId, String title, double point, Quiz quiz){
         this.questionId = questionId;
         this.title = title;
         this.point = point;
+        this.quiz = quiz;
     }
     public Question(){
 
+    }
+    public Question(Quiz quiz){
+
+        this.quiz = quiz;
     }
 
 }
