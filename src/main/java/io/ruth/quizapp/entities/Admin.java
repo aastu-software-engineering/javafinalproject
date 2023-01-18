@@ -15,14 +15,17 @@ public class Admin extends User {
     }
 
     public void setCompany(String company) {
+
         this.company = company;
     }
 
     public String getRole() {
+
         return role;
     }
 
     public void setRole(String role) {
+
         this.role = role;
     }
 }
