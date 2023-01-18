@@ -10,23 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9f8e4df-637b-4e6c-a919-8db2fd1e7e2b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Examinee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Examinee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/MultipleChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/MultipleChoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/ShortAnswer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/ShortAnswer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/TestClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,30 +38,32 @@
     </option>
   </component>
   <component name="ProjectId" id="2KSt93iTZPhkDnSmY7EyFFnWQKe" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.TestClass">
     <configuration name="TestClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.ruth.quizapp.entities.TestClass" />
@@ -151,6 +137,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

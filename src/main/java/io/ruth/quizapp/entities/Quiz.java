@@ -12,7 +12,8 @@ public class Quiz {
     @Id
     @Column(name = "quizId")
     private int quizId;
-
+    private boolean retake;
+    private int minutes;
     @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
     @JoinColumn(name = "quiz_id")
     private Set<Question> questions = new LinkedHashSet<>();
