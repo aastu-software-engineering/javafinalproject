@@ -1,16 +1,27 @@
 package io.ruth.quizapp.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
+@Table(name="quiz")
 public class Quiz {
     @Id
-    private String quizId;
-    @OneToMany(mappedBy = "Quiz")
-    ArrayList<Question>questions;
+    @Column(name = "quizId")
+    private int quizId;
+
+    @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
+    @JoinColumn(name = "quiz_id")
+    private Set<Question> questions = new LinkedHashSet<>();
+
+    public Set<Question> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(Set<Question> questions) {
+        this.questions = questions;
+    }
 }

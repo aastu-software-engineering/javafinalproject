@@ -9,19 +9,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9f8e4df-637b-4e6c-a919-8db2fd1e7e2b" name="Changes" comment="start project">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Examinee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/MultipleChoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Quiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/ShortAnswer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/TestClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+    <list default="true" id="f9f8e4df-637b-4e6c-a919-8db2fd1e7e2b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Examinee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Examinee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/MultipleChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/MultipleChoice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/ShortAnswer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/ShortAnswer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/TestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +41,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -55,9 +54,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2KSt93iTZPhkDnSmY7EyFFnWQKe" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -72,7 +69,13 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="Application.TestClass">
@@ -141,38 +144,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673979775817</updated>
-      <workItem from="1673979775820" duration="8263000" />
+      <workItem from="1673979775820" duration="2352000" />
+      <workItem from="1674017750615" duration="6685000" />
     </task>
-    <task id="LOCAL-00001" summary="start project">
-      <created>1673984078821</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1673984078821</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="start project" />
-    <option name="LAST_COMMIT_MESSAGE" value="start project" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/ShortAnswer.java</url>
-          <line>7</line>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Question.java</url>
-          <line>16</line>
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.exception.SQLGrammarException" package="org.hibernate.exception" />
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
