@@ -8,46 +8,34 @@ import java.util.Set;
 
 @Entity
 @Table(name="quiz")
-
 public class Quiz {
     @Id
     @Column(name = "quizId")
     private int quizId;
-
-    public Admin getPreparedBy() {
-        return preparedBy;
-    }
-
-    public void setPreparedBy(Admin preparedBy) {
-        this.preparedBy = preparedBy;
-    }
-
-    @ManyToOne
-    private Admin preparedBy;
     private boolean retake;
-
-    public void setQuizId(int quizId) {
-        this.quizId = quizId;
-    }
-
-    public void setRetake(boolean retake) {
-        this.retake = retake;
-    }
-
-    public void setMinutes(int minutes) {
-        this.minutes = minutes;
-    }
 
     public int getQuizId() {
         return quizId;
+    }
+
+    public void setQuizId(int quizId) {
+        this.quizId = quizId;
     }
 
     public boolean isRetake() {
         return retake;
     }
 
+    public void setRetake(boolean retake) {
+        this.retake = retake;
+    }
+
     public int getMinutes() {
         return minutes;
+    }
+
+    public void setMinutes(int minutes) {
+        this.minutes = minutes;
     }
 
     private int minutes;
@@ -60,7 +48,6 @@ public class Quiz {
     }
 
     public void setQuestions(Set<Question> questions) {
-
         this.questions = questions;
     }
 }
