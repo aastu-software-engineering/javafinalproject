@@ -1,24 +1,14 @@
 package io.ruth.quizapp.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 
 @Entity
-public class Admin {
-    @Id
-    @GeneratedValue
-    private String adminId;
+@Table(name = "admin")
+public class Admin extends User {
     private String company;
     private String role;
 
-    public String getAdminId() {
-        return adminId;
-    }
-
-    public void setAdminId(String adminId) {
-        this.adminId = adminId;
-    }
 
     public String getCompany() {
         return company;

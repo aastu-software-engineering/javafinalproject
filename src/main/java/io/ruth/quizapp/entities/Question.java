@@ -2,7 +2,8 @@ package io.ruth.quizapp.entities;
 
 import jakarta.persistence.*;
 
-@MappedSuperclass
+@Entity
+@Table(name = "question")
 public class Question {
     @Id
     private int questionId;
