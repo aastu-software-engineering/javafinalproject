@@ -13,6 +13,31 @@ public class Quiz {
     @Column(name = "quizId")
     private int quizId;
     private boolean retake;
+
+    public int getQuizId() {
+        return quizId;
+    }
+
+    public void setQuizId(int quizId) {
+        this.quizId = quizId;
+    }
+
+    public boolean isRetake() {
+        return retake;
+    }
+
+    public void setRetake(boolean retake) {
+        this.retake = retake;
+    }
+
+    public int getMinutes() {
+        return minutes;
+    }
+
+    public void setMinutes(int minutes) {
+        this.minutes = minutes;
+    }
+
     private int minutes;
     @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
     @JoinColumn(name = "quiz_id")
