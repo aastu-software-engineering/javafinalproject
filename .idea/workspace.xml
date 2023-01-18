@@ -9,13 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9f8e4df-637b-4e6c-a919-8db2fd1e7e2b" name="Changes" comment="defining interface for examineeServic service and admin service">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/services/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/User.java" afterDir="false" />
-    </list>
+    <list default="true" id="f9f8e4df-637b-4e6c-a919-8db2fd1e7e2b" name="Changes" comment="implemented AdminService" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674032364144</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="implemented AdminService">
+      <created>1674040985339</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674040985339</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +173,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="defining interface for examinee service and admin service" />
     <MESSAGE value="defining interface for examineeServic service and admin service" />
-    <option name="LAST_COMMIT_MESSAGE" value="defining interface for examineeServic service and admin service" />
+    <MESSAGE value="implemented AdminService" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented AdminService" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
