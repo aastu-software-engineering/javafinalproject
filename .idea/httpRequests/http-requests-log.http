@@ -1,0 +1,277 @@
+GET http://127.0.0.1:3000/QuizApp_war_exploded/api/examinee/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://127.0.0.1:3000/QuizApp_war_exploded/api/quiz
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T130916.200.txt
+
+###
+
+GET http://127.0.0.1:3000/api/quiz
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T130725.404.html
+
+###
+
+GET http://127.0.0.1:3000/api/examinee/1
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T130705.404.html
+
+###
+
+GET http://127.0.0.1:3000/api/examinee/1/12
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T125930.404.html
+
+###
+
+GET http://127.0.0.1:3000/api/examinee/1/12/seeScore
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T125911.404.html
+
+###
+
+GET http://127.0.0.1:3000
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T105409.404.html
+
+###
+
+GET http://127.0.0.1:3000/quizapp
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T105403.404.html
+
+###
+
+GET http://127.0.0.1:3000/api/
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T105355.404.html
+
+###
+
+GET http://localhost:3000/quizapp/quiz
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T105120.404.html
+
+###
+
+GET http://localhost:3000/quizapp
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T105112.404.html
+
+###
+
+GET http://localhost:3000/api/quiz
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T105057.404.html
+
+###
+
+GET http://127.0.0.1:3000/io.ruth.quizapp/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T104719.404.html
+
+###
+
+GET http://127.0.0.1:3000/quizapp/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T104645.404.html
+
+###
+
+GET http://127.0.0.1:3000/quizapp/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T104642.404.html
+
+###
+
+GET http://127.0.0.1:3000/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T104626.404.html
+
+###
+
+GET http://localhost:3000/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T095653.404.html
+
+###
+
+GET http://localhost:3000/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T095650.404.html
+
+###
+
+GET http://127.0.0.1:3000/api/examinee
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T095615.404.html
+
+###
+
+GET http://127.0.0.1:3000/rest/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T095553.404.html
+
+###
+
+GET http://127.0.0.1:8080/rest/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T095542.404.html
+
+###
+
+GET http://127.0.0.1:8080/rest/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T094039.404.html
+
+###
+
+GET http://127.0.0.1:3000/rest/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T094005.404.html
+
+###
+
+GET http://127.0.0.1:3000/io.ruth/rest/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T093945.404.html
+
+###
+
+GET http://127.0.0.1:3000/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-19T093920.404.html
+
+###
+
+GET http://localhost:8080/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-18T175511.404.html
+
+###
+
+GET http://localhost:8080/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-18T175459-2.404.html
+
+###
+
+GET http://localhost:3000/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-18T175348.404.html
+
+###
+
+GET http://localhost:3000/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-18T175106.404.html
+
+###
+
+GET http://localhost:3000/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-18T175101.404.html
+
+###
+
+GET http://localhost:3000/api/hello-world
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-01-18T175015.404.html
+
+###
+
