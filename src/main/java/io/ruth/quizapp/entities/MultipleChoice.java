@@ -1,9 +1,8 @@
 package io.ruth.quizapp.entities;
 
 import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumns;
+
 
 import java.util.ArrayList;
 

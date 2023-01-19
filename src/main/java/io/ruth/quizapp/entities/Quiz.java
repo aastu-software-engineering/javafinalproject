@@ -2,7 +2,6 @@ package io.ruth.quizapp.entities;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.Set;
 

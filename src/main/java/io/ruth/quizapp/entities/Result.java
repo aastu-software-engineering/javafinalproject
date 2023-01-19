@@ -16,4 +16,5 @@ public class Result {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "quizId")
     private Quiz quiz;
+
 }

@@ -9,7 +9,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9f8e4df-637b-4e6c-a919-8db2fd1e7e2b" name="Changes" comment="">
+    <list default="true" id="f9f8e4df-637b-4e6c-a919-8db2fd1e7e2b" name="Changes" comment="implemented ExamineeService">
+      <change afterPath="$PROJECT_DIR$/.idea/DtonatorPreferences.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-request.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/DTO/Answer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/DTO/ScoreResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/DTO/SubmitQuizDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/controllers/ExamineeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/controllers/QuizController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/services/IQuizService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/services/QuizService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/HelloResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/HelloResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Examinee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Examinee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/MultipleChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/MultipleChoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/entities/TestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/services/ExamineeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/services/ExamineeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/services/IExamineeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/ruth/quizapp/services/IExamineeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,12 +43,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,7 +87,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -64,19 +96,29 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.TestClass">
-    <configuration name="TestClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.ruth.quizapp.entities.TestClass" />
-      <module name="QuizApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.ruth.quizapp.entities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="io.ruth.quizapp.services" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.0.27">
+    <configuration name="All in javafinalproject-endpoints" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/javafinalproject-endpoints.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" requestIdentifier="#7" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #9" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="9" requestIdentifier="#9" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="http-request | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http-request.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="javafinalproject-endpoints | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/javafinalproject-endpoints.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration name="Tomcat 10.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
@@ -118,7 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestClass" />
+        <item itemvalue="HTTP Request.generated-requests | #9" />
+        <item itemvalue="HTTP Request.generated-requests | #7" />
+        <item itemvalue="HTTP Request.http-request | #2" />
+        <item itemvalue="HTTP Request.All in javafinalproject-endpoints" />
+        <item itemvalue="HTTP Request.javafinalproject-endpoints | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +178,19 @@
       <updated>1673979775817</updated>
       <workItem from="1673979775820" duration="2352000" />
       <workItem from="1674017750615" duration="6685000" />
+      <workItem from="1674107465296" duration="3197000" />
+      <workItem from="1674114153261" duration="893000" />
+      <workItem from="1674117771281" duration="800000" />
+      <workItem from="1674120764665" duration="3337000" />
     </task>
+    <task id="LOCAL-00001" summary="implemented ExamineeService">
+      <created>1674040887633</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674040887633</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +206,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="implemented ExamineeService" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented ExamineeService" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
