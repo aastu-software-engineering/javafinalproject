@@ -29,10 +29,14 @@ public class ExamineeService implements IExamineeService{
     }
     @Override
     public int register(Examinee ex) {
-        em.getTransaction().begin();
-        em.persist(ex);
-        em.getTransaction().commit();
-        return ex.getUserId();
+        try {
+            em.getTransaction().begin();
+            em.persist(ex);
+            em.getTransaction().commit();
+            return ex.getUserId();
+        }catch (Exception e){
+            return 0;
+        }
     }
 
     @Override

@@ -9,14 +9,18 @@ import jakarta.persistence.Persistence;
 
 public class TestClass {
     public static void main(String[] args) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Admins");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("admin");
         EntityManager em = entityManagerFactory.createEntityManager();
-        Admin admin = new Admin();
-        admin.setCompany("helo");
-        admin.setRole("admin");
+        Examinee user = new Examinee();
+        user.setName("Ruth");
+        user.setEmail("ruth@gmail.com");
+        user.setProfession("Software Engineer");
+        user.setPassword("123456");
+
 
         em.getTransaction().begin();
+        em.persist(user);
         em.getTransaction().commit();
-        em.close();
+
     }
 }

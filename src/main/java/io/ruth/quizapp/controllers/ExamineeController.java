@@ -5,9 +5,12 @@ import io.ruth.quizapp.services.QuizService;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import org.hibernate.validator.internal.util.logging.LoggerFactory;
 
+import java.util.logging.Logger;
 @Path("/examinee")
 public class ExamineeController {
+
     private final ExamineeService examineService = new ExamineeService();
     private final QuizService quizService = new QuizService();
     public ExamineeController() {
@@ -23,6 +26,7 @@ public class ExamineeController {
         }
     }
     //TODO: list of quizzes the person take
+    //not tested
     @GET
     @Path("/{id}/score/{quizId}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -43,6 +47,7 @@ public class ExamineeController {
             return Response.ok(examineService.register(ex)).build();
         } catch (Exception e) {
             return Response.status(Response.Status.NOT_FOUND).build();
+            //return Response.status(Response.Status.NOT_FOUND).build();
         }
     }
     @PUT

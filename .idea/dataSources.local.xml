@@ -2,8 +2,17 @@
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-223.8214.52">
     <data-source name="@localhost" uuid="615ac45e-9244-496a-ba82-b0aa8944daf9">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
-      <schema-mapping />
+      <database-info product="MySQL" version="8.0.31-0ubuntu0.22.04.1" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MYSQL" exact-version="8.0.31" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="javaproject" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>

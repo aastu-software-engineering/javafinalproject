@@ -6,10 +6,8 @@ import io.ruth.quizapp.entities.Quiz;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-import jakarta.persistence.Query;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.validation.constraints.Null;
 
 import java.util.ArrayList;
 import java.util.HashMap;

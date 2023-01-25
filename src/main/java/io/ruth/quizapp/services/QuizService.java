@@ -8,10 +8,8 @@ import io.ruth.quizapp.entities.Result;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+
+import java.util.*;
 
 public class QuizService implements IQuizService {
     private EntityManager em;
@@ -26,6 +24,8 @@ public class QuizService implements IQuizService {
         //TODO: set start time for quiz
         Quiz q = em.find(Quiz.class, quizId);
         Examinee e = em.find(Examinee.class, examineeId);
+        Date date = new Date();
+
         if (q.isRetake() == false) {
             Map<String, Integer> map = new HashMap<>();
             map.put("examineeId", examineeId);

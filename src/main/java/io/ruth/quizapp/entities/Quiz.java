@@ -12,11 +12,15 @@ public class Quiz {
     @Column(name = "quizId")
     private int quizId;
     private boolean retake;
-
+    @ManyToOne
+    private Admin preparedBy;
+    private int totalMark;
+    private int minutes;
+    @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
+    private Set<Question> questions = new LinkedHashSet<>();
     public int getQuizId() {
         return quizId;
     }
-
     public void setQuizId(int quizId) {
         this.quizId = quizId;
     }
@@ -32,21 +36,19 @@ public class Quiz {
     public int getMinutes() {
         return minutes;
     }
-
     public void setMinutes(int minutes) {
         this.minutes = minutes;
     }
-
-    private int minutes;
-    @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
-    @JoinColumn(name = "quiz_id")
-    private Set<Question> questions = new LinkedHashSet<>();
-
     public Set<Question> getQuestions() {
         return questions;
     }
-
     public void setQuestions(Set<Question> questions) {
         this.questions = questions;
+    }
+    public Admin getPreparedBy() {
+        return preparedBy;
+    }
+    public void setPreparedBy(Admin preparedBy) {
+        this.preparedBy = preparedBy;
     }
 }
