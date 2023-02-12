@@ -1,31 +1,39 @@
 package io.ruth.quizapp.entities;
 
 import jakarta.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "question")
 public class Question {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int questionId;
     private String title;
     private String answer;
+
+
+    public Set<String> getChoices() {
+        return choices;
+    }
+
+    public void setChoices(Set<String> choices) {
+        this.choices = choices;
+    }
+
+    @ElementCollection
+    private Set<String> choices = new HashSet<>();
     private double point;
-    @ManyToOne
-    @JoinColumn(name = "quizId")
-    public Quiz quiz;
-    public Question(int questionId, String title, double point, Quiz quiz){
+    public Question(int questionId, String title, double point){
         this.questionId = questionId;
         this.title = title;
         this.point = point;
-        this.quiz = quiz;
     }
     public Question(){
 
     }
-    public Question(Quiz quiz){
 
-        this.quiz = quiz;
-    }
 
     public int getQuestionId() {
         return questionId;
@@ -59,15 +67,10 @@ public class Question {
         this.point = point;
     }
 
-    public Quiz getQuiz() {
-        return quiz;
-    }
-
-    public void setQuiz(Quiz quiz) {
-        this.quiz = quiz;
-    }
 
     public String getCorrectAnswer() {
         return answer;
     }
+
+
 }

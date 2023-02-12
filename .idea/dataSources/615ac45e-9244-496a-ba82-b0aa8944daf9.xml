@@ -1101,11 +1101,11 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>MyISAM</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="299" parent="289" name="ShortAnswer_possibleAnswers">
+    <table id="299" parent="289" name="Question_choices">
       <Engine>MyISAM</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="300" parent="289" name="admin">
+    <table id="300" parent="289" name="ShortAnswer_possibleAnswers">
       <Engine>MyISAM</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
@@ -1125,287 +1125,274 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>MyISAM</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="305" parent="289" name="quiz">
+    <table id="305" parent="289" name="question_SEQ">
       <Engine>MyISAM</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="306" parent="289" name="quiz_question">
+    <table id="306" parent="289" name="quiz">
       <Engine>MyISAM</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="307" parent="289" name="result">
+    <table id="307" parent="289" name="quiz_SEQ">
       <Engine>MyISAM</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="308" parent="298" name="MultipleChoice_questionId">
+    <table id="308" parent="289" name="quiz_question">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="309" parent="289" name="result">
+      <Engine>MyISAM</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="310" parent="298" name="MultipleChoice_questionId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="309" parent="298" name="choices">
+    <column id="311" parent="298" name="choices">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <index id="310" parent="298" name="FKbr08jpyipumeav0f7yn773pqq">
+    <index id="312" parent="298" name="FKbr08jpyipumeav0f7yn773pqq">
       <ColNames>MultipleChoice_questionId</ColNames>
       <Type>btree</Type>
     </index>
-    <column id="311" parent="299" name="ShortAnswer_questionId">
+    <column id="313" parent="299" name="Question_questionId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="312" parent="299" name="possibleAnswers">
+    <column id="314" parent="299" name="choices">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <index id="313" parent="299" name="FK9agndnueda462w6vj5212k1j0">
+    <index id="315" parent="299" name="FKm4dujrda8ytqo9xtumncv21h1">
+      <ColNames>Question_questionId</ColNames>
+      <Type>btree</Type>
+    </index>
+    <column id="316" parent="300" name="ShortAnswer_questionId">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="317" parent="300" name="possibleAnswers">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <index id="318" parent="300" name="FK9agndnueda462w6vj5212k1j0">
       <ColNames>ShortAnswer_questionId</ColNames>
       <Type>btree</Type>
     </index>
-    <column id="314" parent="300" name="adminId">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="315" parent="300" name="company">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="316" parent="300" name="role">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="317" parent="300" name="userId">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <column id="318" parent="300" name="email">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>5</Position>
-    </column>
-    <column id="319" parent="300" name="name">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>6</Position>
-    </column>
-    <column id="320" parent="300" name="password">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>7</Position>
-    </column>
-    <index id="321" parent="300" name="PRIMARY">
-      <ColNames>adminId</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="322" parent="300" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="323" parent="301" name="next_val">
+    <column id="319" parent="301" name="next_val">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="324" parent="302" name="userId">
+    <column id="320" parent="302" name="userId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="325" parent="302" name="email">
+    <column id="321" parent="302" name="email">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="326" parent="302" name="name">
+    <column id="322" parent="302" name="name">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="327" parent="302" name="password">
+    <column id="323" parent="302" name="password">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="328" parent="302" name="profession">
+    <column id="324" parent="302" name="profession">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>
-    <index id="329" parent="302" name="PRIMARY">
+    <index id="325" parent="302" name="PRIMARY">
       <ColNames>userId</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="330" parent="302" name="PRIMARY">
+    <key id="326" parent="302" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="331" parent="303" name="next_val">
+    <column id="327" parent="303" name="next_val">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="332" parent="304" name="DTYPE">
+    <column id="328" parent="304" name="DTYPE">
       <DasType>varchar(31)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="333" parent="304" name="questionId">
+    <column id="329" parent="304" name="questionId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="334" parent="304" name="answer">
+    <column id="330" parent="304" name="answer">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="335" parent="304" name="point">
+    <column id="331" parent="304" name="point">
       <DasType>double|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="336" parent="304" name="title">
+    <column id="332" parent="304" name="title">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="337" parent="304" name="quizId">
+    <column id="333" parent="304" name="quiz_quizId">
       <DasType>int|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="338" parent="304" name="quiz_id">
-      <DasType>int|0s</DasType>
-      <Position>7</Position>
-    </column>
-    <index id="339" parent="304" name="PRIMARY">
+    <index id="334" parent="304" name="PRIMARY">
       <ColNames>questionId</ColNames>
-      <NameSurrogate>1</NameSurrogate>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="340" parent="304" name="FKlwgsjakvjeotegingmmc0g3hh">
-      <ColNames>quizId</ColNames>
+    <index id="335" parent="304" name="FKl7sebu5sy7v970bbrd4mn1huq">
+      <ColNames>quiz_quizId</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="341" parent="304" name="FKb0yh0c1qaxfwlcnwo9dms2txf">
-      <ColNames>quiz_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="342" parent="304" name="PRIMARY">
+    <key id="336" parent="304" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="343" parent="305" name="quizId">
+    <column id="337" parent="305" name="next_val">
+      <DasType>bigint|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="338" parent="306" name="quizId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="344" parent="305" name="minutes">
+    <column id="339" parent="306" name="minutes">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="345" parent="305" name="retake">
+    <column id="340" parent="306" name="retake">
       <DasType>bit(1)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="346" parent="305" name="preparedBy">
+    <column id="341" parent="306" name="preparedBy">
       <DasType>varbinary(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="347" parent="305" name="totalMark">
+    <column id="342" parent="306" name="totalMark">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="348" parent="305" name="preparedBy_userId">
+    <column id="343" parent="306" name="preparedBy_userId">
       <DasType>int|0s</DasType>
       <Position>6</Position>
     </column>
-    <index id="349" parent="305" name="PRIMARY">
+    <column id="344" parent="306" name="name">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="345" parent="306" name="description">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>8</Position>
+    </column>
+    <index id="346" parent="306" name="PRIMARY">
       <ColNames>quizId</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="350" parent="305" name="FKind6n5t6clxjpysa6olxi50j0">
+    <index id="347" parent="306" name="FKind6n5t6clxjpysa6olxi50j0">
       <ColNames>preparedBy_userId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="351" parent="305" name="PRIMARY">
+    <key id="348" parent="306" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="352" parent="306" name="Quiz_quizId">
+    <column id="349" parent="307" name="next_val">
+      <DasType>bigint|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="350" parent="308" name="Quiz_quizId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="353" parent="306" name="questions_questionId">
+    <column id="351" parent="308" name="questions_questionId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <index id="354" parent="306" name="PRIMARY">
+    <index id="352" parent="308" name="PRIMARY">
       <ColNames>Quiz_quizId
 questions_questionId</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="355" parent="306" name="UK_ctl039uq9bbx73tn5fxun3n9y">
+    <index id="353" parent="308" name="UK_ctl039uq9bbx73tn5fxun3n9y">
       <ColNames>questions_questionId</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="356" parent="306" name="PRIMARY">
+    <key id="354" parent="308" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="357" parent="306" name="UK_ctl039uq9bbx73tn5fxun3n9y">
+    <key id="355" parent="308" name="UK_ctl039uq9bbx73tn5fxun3n9y">
       <UnderlyingIndexName>UK_ctl039uq9bbx73tn5fxun3n9y</UnderlyingIndexName>
     </key>
-    <column id="358" parent="307" name="resultId">
+    <column id="356" parent="309" name="resultId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="359" parent="307" name="date">
+    <column id="357" parent="309" name="date">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="360" parent="307" name="score">
+    <column id="358" parent="309" name="score">
       <DasType>double|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="361" parent="307" name="status">
+    <column id="359" parent="309" name="status">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="362" parent="307" name="examineeId">
+    <column id="360" parent="309" name="examineeId">
       <DasType>int|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="363" parent="307" name="quizId">
+    <column id="361" parent="309" name="quizId">
       <DasType>int|0s</DasType>
       <Position>6</Position>
     </column>
-    <index id="364" parent="307" name="PRIMARY">
+    <index id="362" parent="309" name="PRIMARY">
       <ColNames>resultId</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="365" parent="307" name="FKp9k0n5fvj8ng3ngvcs54loqcu">
+    <index id="363" parent="309" name="FKp9k0n5fvj8ng3ngvcs54loqcu">
       <ColNames>examineeId</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="366" parent="307" name="FKhlffwut9qyopo8x8lio8483eb">
+    <index id="364" parent="309" name="FKhlffwut9qyopo8x8lio8483eb">
       <ColNames>quizId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="367" parent="307" name="PRIMARY">
+    <key id="365" parent="309" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

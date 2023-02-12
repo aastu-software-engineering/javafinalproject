@@ -10,12 +10,24 @@ import java.util.Set;
 public class Quiz {
     @Id
     @Column(name = "quizId")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int quizId;
     private boolean retake;
+    private String name;
     @ManyToOne
     private Admin preparedBy;
     private int totalMark;
     private int minutes;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    private String description;
     @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true)
     private Set<Question> questions = new LinkedHashSet<>();
     public int getQuizId() {
@@ -50,5 +62,20 @@ public class Quiz {
     }
     public void setPreparedBy(Admin preparedBy) {
         this.preparedBy = preparedBy;
+    }
+
+    public void setTotalMark(int totalMark) {
+        this.totalMark = totalMark;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getTotalMark() {
+        return totalMark;
     }
 }

@@ -8,9 +8,9 @@ public class ScoreResponseDto {
     public List<Checks> checks;
 
     public String comment;
-    public int score;
+    public double score;
 
-    public void setScore(int score) {
+    public void setScore(double score) {
         this.score = score;
     }
 

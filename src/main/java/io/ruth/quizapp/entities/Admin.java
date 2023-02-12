@@ -7,8 +7,6 @@ import jakarta.persistence.*;
 @Table(name = "admin")
 public class Admin extends User {
     private String company;
-    private String role;
-
 
     public String getCompany() {
         return company;
@@ -17,15 +15,5 @@ public class Admin extends User {
     public void setCompany(String company) {
 
         this.company = company;
-    }
-
-    public String getRole() {
-
-        return role;
-    }
-
-    public void setRole(String role) {
-
-        this.role = role;
     }
 }

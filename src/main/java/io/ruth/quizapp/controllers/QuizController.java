@@ -1,33 +1,39 @@
 package io.ruth.quizapp.controllers;
 
-import io.ruth.quizapp.DTO.Answer;
+import io.ruth.quizapp.DTO.CreateQuizDto;
 import io.ruth.quizapp.DTO.SubmitQuizDto;
 import io.ruth.quizapp.entities.Quiz;
 import io.ruth.quizapp.entities.Result;
-import io.ruth.quizapp.services.QuizService;
+import io.ruth.quizapp.services.IQuizService;
+import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Request;
-
-import java.awt.*;
-import java.util.ArrayList;
+import jakarta.ws.rs.core.Response;
 
 @Path("/quiz")
 public class QuizController {
-    QuizService quizService;
+    @Inject
+    private IQuizService quizService;
+    public QuizController() {
+    }
     @GET
     @Path("/start/{id}/{quizId}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Quiz startQuiz(@PathParam("id") int id, @PathParam("quizId") int quizId){
-        return quizService.takeQuiz(id,quizId);
+    public Response startQuiz(@PathParam("id") int id, @PathParam("quizId") int quizId){
+        try {
+            Quiz quiz = quizService.takeQuiz(id, quizId);
+            return Response.ok(quiz).build();
+        } catch (Exception e){
+            return Response.status(400).build();
+        }
     }
     @GET
     @Path("/retake/{id}/{quizId}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Quiz retakeQuiz(@PathParam("id") int id, @PathParam("quizId") int quizId){
+
         return quizService.retakeQuiz(id,quizId);
     }
     @GET
@@ -41,9 +47,49 @@ public class QuizController {
     @Path("/grade/{id}/{quizId}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public float gradeQuiz(@PathParam("id") int id, @PathParam("quizId") int quizId, SubmitQuizDto quizDto) {
-            ArrayList<Answer> providedAns = quizDto.getAnswers();
-            return quizService.gradeQuiz(id, quizId, providedAns);
+    public Response gradeQuiz(@PathParam("id") int id, @PathParam("quizId") int quizId, SubmitQuizDto quizDto) {
+            try{
+                return Response.ok(quizService.gradeQuiz(id,quizId,quizDto.getAnswers())).build();
+            } catch (Exception e){
+                return Response.status(400).build();
+            }
     }
-
+    @POST
+    @Path("/create")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response createQuiz(CreateQuizDto quizDto){
+        System.out.println(quizDto.getQuestions().size());
+        if(quizDto.getQuestions().size() == 0){
+            return Response.status(400).build();
+        }
+        Quiz quiz = quizService.createQuiz(quizDto);
+        try{
+            return Response.ok(quiz).build();
+        } catch (Exception e){
+            return Response.status(400).build();
+        }
+    }
+    @GET
+    @Path("/all/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllQuizzes(@PathParam("id") int id){
+        try{
+            return Response.ok(quizService.getAllQuizzes(id)).build();
+        } catch (Exception e){
+            System.out.println(e);
+            return Response.status(400).build();
+        }
+    }
+    @GET
+    @Path("/stats/{adminId}/{quizId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getQuizStats(@PathParam("adminId") int adminId, @PathParam("quizId") int quizId){
+        try{
+            return Response.ok(quizService.getQuizStats(adminId,quizId)).build();
+        } catch (Exception e){
+            System.out.println(e);
+            return Response.status(400).build();
+        }
+    }
 }

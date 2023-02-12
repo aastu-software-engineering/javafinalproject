@@ -1,64 +1,23 @@
 package io.ruth.quizapp.services;
 
+import io.ruth.quizapp.DTO.LoginDto;
+import io.ruth.quizapp.Emf;
 import io.ruth.quizapp.entities.Admin;
-import io.ruth.quizapp.entities.Question;
-import io.ruth.quizapp.entities.Quiz;
+import io.ruth.quizapp.exceptions.AuthenticationException;
+import jakarta.annotation.ManagedBean;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
-
-public class AdminService {
+import jakarta.persistence.NoResultException;
+@ManagedBean
+public class AdminService implements IAdminService {
     EntityManager em;
     public AdminService(){
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("admin");
+        EntityManagerFactory emf = Emf.getInstance().getFactory();
         this.em = emf.createEntityManager();
     }
-
-    int quizCreate(Set<Question> questionList, boolean retake, int minutes){
-        Quiz q = new Quiz();
-        q.setMinutes(minutes);
-        q.setRetake(retake);
-        q.setQuestions(questionList);
-        em.getTransaction().begin();
-        em.persist(q);
-        em.getTransaction().commit();
-        return q.getQuizId();
-    }
-    boolean deleteQuiz( int id){
-        em.getTransaction().begin();
-        em.remove(id);
-        em.getTransaction().commit();
-        return true;
-    }
-    ArrayList<Quiz> getQuizzes(int adminId){
-        CriteriaBuilder builder = em.getCriteriaBuilder();
-        CriteriaQuery<Quiz> criteria = builder.createQuery(Quiz.class);
-        criteria.from(Quiz.class);
-        List<Quiz> quizzes = em.createQuery(criteria).getResultList();
-        ArrayList<Quiz> filtered = new ArrayList<>();
-        Admin ad = em.find(Admin.class, adminId);
-        for(int i = 0; i< quizzes.size(); i++){
-            if (quizzes.get(i).getPreparedBy().equals(ad)){
-                filtered.add(quizzes.get(i));
-            }
-        }
-        return filtered;
-    }
-    Quiz getQuiz(int id){
-        Quiz qu = em.find(Quiz.class, id);
-        return qu;
-    }
-    boolean editProfile(Admin admin,int adminId){
+    public boolean editProfile(Admin admin, int adminId){
         Admin ad = em.find(Admin.class,adminId);
         ad.setName(admin.getName());
-        ad.setRole(admin.getRole());
         ad.setUserId(admin.getUserId());
         ad.setEmail(admin.getEmail());
         ad.setCompany(admin.getCompany());
@@ -69,16 +28,41 @@ public class AdminService {
         em.getTransaction().commit();
         return true;
     }
-    int registerAdmin(Admin admin) throws Exception {
-        HashMap<String, String> map = new HashMap<>();
-        map.put("email", admin.getEmail());
-        Admin ad = em.find(Admin.class,map);
-        if(ad != null){
-            throw new Exception("Email already exists!");
-        }
+    public int registerAdmin(Admin admin) throws Exception {
         em.getTransaction().begin();
         em.persist(admin);
         em.getTransaction().commit();
         return admin.getUserId();
+    }
+    public Admin login(LoginDto loginDto){
+        try {
+            Admin admin = em.createQuery("SELECT e FROM Admin e WHERE e.email = :email", Admin.class)
+                    .setParameter("email", loginDto.getEmail())
+                    .getSingleResult();
+            if (admin != null) {
+                if (admin.getPassword().equals(loginDto.getPassword())) {
+                    System.out.println("Login successful");
+                    return admin;
+                } else {
+                    throw new AuthenticationException("Invalid email or password");
+                }
+            }
+            if(admin == null){
+                throw new AuthenticationException("Invalid email or password");
+            }
+            return admin;
+        } catch (NoResultException e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+            throw new AuthenticationException("Error occurred while logging in");
+        } catch(AuthenticationException e){
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+            throw new AuthenticationException("Invalid email or password");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+            throw new RuntimeException("Error occurred while logging in");
+        }
     }
 }
